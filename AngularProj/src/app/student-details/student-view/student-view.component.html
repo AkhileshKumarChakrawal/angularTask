@@ -1,0 +1,34 @@
+<div class="container">
+  <h3 class="text-center text-danger">Student View Component</h3>
+  <!--<table>
+    <tr>
+      <th>StudentId</th>
+      <th colspan="4">Marks</th>
+    </tr>
+    <ng-container *ngFor="let marks of marksArray">
+      <tr *ngIf="marks.stuId === studentId">
+        <td>{{marks.stuId}}</td>
+        <td> English - {{marks.English}}</td>
+        <td> Maths - {{marks.Maths}}</td>
+        <td> Science - {{marks.Science}}</td>
+        <td> Social - {{marks.Social}}</td>
+      </tr>
+    </ng-container>
+  </table>-->
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <tr class="text-center bg-info text-white">
+        <th>StudentId</th>
+        <th colspan="4">Marks</th>
+      </tr>
+      <tr class="text-center">
+        <td>{{marksArray.stuId}}</td>
+        <td> English - {{marksArray.English}}</td>
+        <td> Maths - {{marksArray.Maths}}</td>
+        <td> Science - {{marksArray.Science}}</td>
+        <td> Social - {{marksArray.Social}}</td>
+      </tr>
+    </table>
+  </div>
+
+</div>

@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <h4 class="text-center text-danger">Home Component</h4>
+  <div class="text-center bg-dark" id="homenavigation">
+    <button class="btn btn-primary" (click)="studentsList()">StudentsList</button>&nbsp;&nbsp;
+    <button class="btn btn-primary" [routerLink]="['/register']">Register</button>&nbsp;&nbsp;
+   <!-- <span *ngIf="!(mail == null || mail == undefined || mail == '') && !(password == null || password == undefined || password == '')">
+      <button class="btn btn-primary" [routerLink]="['/loginForm']">LoginForm</button>
+    </span>-->
+    <button class="btn btn-primary" [routerLink]="['/loginForm']">LoginForm</button>
+
+  </div>
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,49 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 offset-md-4">
+      <h2>Student Login</h2>
+      <form [formGroup]="Studentlogin" (ngSubmit)="LoginSubmit()">
+        <div class="formbox">
+
+          <div class="form-group" [ngClass]="{'has-error' : fval.email.errors && (fval.email.dirty || fval.email.touched)}">
+            <input type="text" formControlName="email" class="form-control" placeholder="Full Name" [ngClass]="{ 'is-invalid': submitted && fval.lastName.errors }"/>
+            <div class="help-block" *ngIf="fval.email.errors && (fval.email.dirty || fval.email.touched)">
+              <div *ngIf="fval.email.errors.required">
+                Email is required
+              </div>
+              <div *ngIf="fval.email.errors.pattern">
+                official email is not valid
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group" [ngClass]="{'has-error' : fval.password.errors && (fval.password.dirty || fval.password.touched)}">
+            <input type="password" formControlName="password" class="form-control" placeholder="Password"
+                   [ngClass]="{ 'is-invalid': submitted && fval.fullName.errors }"/>
+            <div class="help-block" *ngIf="fval.password.errors && (fval.password.dirty || fval.password.touched)">
+              <div *ngIf="fval.password.errors.required">
+                password is required
+              </div>
+              <!--<div *ngIf="fval.password.errors.minlength">
+                password contain atleast 6 char
+              </div>
+              <div *ngIf="fval.password.errors.pattern">
+                password contain atleast 1 capital letter , 1 lower letter, 1 number, 1 speical character
+              </div>-->
+            </div>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary signin">Sign Up <span class="arrowbtn"><span
+              class="fa fa-arrow-right"></span></span></button>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div>
+  <h3 class="text-danger text-center">{{loginMsg}}</h3>
+</div>

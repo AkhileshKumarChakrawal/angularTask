@@ -1,0 +1,33 @@
+<div class="container">
+  <h2 class="text-center text-info">Student Details component</h2>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <tr class="text-center bg-primary text-white">
+        <th>Id</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Action</th>
+      </tr>
+      <tr class="text-center" *ngFor="let students of studentsList">
+        <td>{{students.id}}</td>
+        <td>{{students.name}}</td>
+        <td>City: {{students.address.city}}<br>State: {{students.address.state}}-{{students.address.zipCode}}</td>
+        <td>
+          <!--<button (click)="studentView(students.id, studentsMarks)">View</button>-->&nbsp;
+          <button class="btn btn-info" (click)="studentView(students.id)">View</button>&nbsp;
+          <button class="btn btn-success" [routerLink]="['/edit', students.id, students.name]">edit</button>
+          <!--<button class="btn btn-success" (click)="studentEdit(students.id, students.name)">Edit</button>-->
+        </td>
+      </tr>
+    </table>
+  </div>
+  <ng-container *ngFor="let student of studentsList">
+    <div *ngIf="selectId === student.id" >
+      <!--<app-student-view [marksArray]="stuSelect" [studentId]="selectId"></app-student-view>-->
+      <app-student-view [marksArray]="sIdMarks"></app-student-view>
+    </div>
+  </ng-container>
+
+  <router-outlet></router-outlet>
+</div>
+

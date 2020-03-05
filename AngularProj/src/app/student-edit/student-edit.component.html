@@ -1,0 +1,19 @@
+<div class="container">
+  <h1 class="text-center text-info">Student Edit Component</h1>
+  <h3 class="text-center text-success">You Entered id is :: {{studentId}}</h3>
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <tr class="bg-primary text-center text-white">
+        <th>StudentId</th>
+        <th>StudentName</th>
+      </tr>
+      <tr class="text-center">
+        <td><input type="text" value="{{studentId}}"></td>
+        <td><input type="text" value="{{studentName}}"></td>
+      </tr>
+    </table>
+  </div>
+  <br>
+  <button class="btn btn-warning text-center" (click)="gotoBack()">Go to Back</button>
+  <router-outlet></router-outlet>
+</div>

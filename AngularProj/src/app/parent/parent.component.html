@@ -1,0 +1,9 @@
+<p>parent works!</p>
+<h1 appAttributDir>{{title}}</h1>
+<app-child [ParentMsg]="title" [StudentData]="student" (sendData)="reciveMsg($event)"></app-child>
+<ul *ngIf="recieveChildData !=null">
+  <li>{{recieveChildData.sid}}</li>
+  <li>{{recieveChildData.sname}}</li>
+  <li>{{recieveChildData.address}}</li>
+</ul>
+
