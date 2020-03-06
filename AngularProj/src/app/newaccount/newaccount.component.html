@@ -1,0 +1,21 @@
+
+      <input
+        type="text"
+        class="form-control"
+        #accountName>
+
+
+      <select class="form-control" #status>
+        <option value="active">Active</option>
+        <option value="inactive">Inactive</option>
+        <option value="hidden">Hidden</option>
+      </select>
+
+    <button
+
+      (click)="onCreateAccount(accountName.value, status.value)">
+      Add Account
+    </button>
+
+
+

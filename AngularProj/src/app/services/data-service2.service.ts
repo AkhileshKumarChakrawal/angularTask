@@ -19,6 +19,6 @@ export class DataService2Service {
     return this.Marks;
   }
   getcurrentDate(){
-    this.dateService.getcurrentdate();
+  return this.dateService.getcurrentdate();
   }
 }

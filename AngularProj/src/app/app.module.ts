@@ -16,6 +16,10 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { ParentViewComponent } from './parent-view/parent-view.component';
 import {DataService2Service} from "./services/data-service2.service";
+import { ObservableSubscribeComponent } from './observable-subscribe/observable-subscribe.component';
+import { AccountComponent } from './account/account.component';
+import { NewaccountComponent } from './newaccount/newaccount.component';
+
 
 @NgModule({
   declarations: [
@@ -30,12 +34,16 @@ import {DataService2Service} from "./services/data-service2.service";
     AttributDirDirective,
     ParentComponent,
     ChildComponent,
-    ParentViewComponent
+    ParentViewComponent,
+    ObservableSubscribeComponent,
+    AccountComponent,
+    NewaccountComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
   ],
   providers: [DataService2Service],
   bootstrap: [AppComponent]
